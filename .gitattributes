@@ -1,0 +1,7 @@
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+*.md text eol=lf
+LICENSE text eol=lf
+*.png binary
+# Preserve the accepted source bytes, including its ASCII encoding and CRLF endings.
+src/ChatGPT-Codex-Selector-v0.3.ps1 -text

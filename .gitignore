@@ -1,0 +1,12 @@
+# Generated release packages and temporary build files
+dist/
+.local/
+# Local preferences are never part of the distribution
+settings*.json
+sexy-v02.json
+# Editor and operating system files
+.vscode/
+.idea/
+*.log
+Thumbs.db
+Desktop.ini
