@@ -1,4 +1,4 @@
-# License choice
+# License choice for ChatGPT & Codex Launcher
 
 **MIT is a practical choice for this small utility.** It lets people use, study, modify, and share the launcher, including in commercial settings, while requiring preservation of the copyright and license notice.
 

@@ -4,6 +4,8 @@
 
 Select **EDIT** in the widget to change either button's displayed name or its always-on-top preference. These preferences are saved locally.
 
+Fresh settings use **ChatGPT** for the blue button and **Codex** for the purple button. Existing saved names are kept when upgrading; use **EDIT** to change them if desired.
+
 Changing a name does not change the button's action. The blue button still sends **Alt+3**, and the purple button still sends **Alt+1**.
 
 Move the widget using its title area and resize it from the lower-right corner. Its saved position and size are restored on later runs.
@@ -14,7 +16,7 @@ Move the widget using its title area and resize it from the lower-right corner. 
 %APPDATA%\NeonChatSelector\settings-v0.3.json
 ```
 
-The launcher uses the original v0.3 settings location, so an existing installation's v0.3 preferences are reused. The release ZIP contains no personal settings.
+The launcher uses the original v0.3 settings location, so an existing installation's v0.3 preferences are reused. The branding update on 2026-10-08 preserves this behavior. The release ZIP contains no personal settings.
 
 ## Reset settings
 

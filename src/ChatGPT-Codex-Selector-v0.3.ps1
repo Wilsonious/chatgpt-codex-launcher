@@ -1,8 +1,8 @@
 
-# ChatGPT/Codex selector - Neon Edition v0.3
+# ChatGPT & Codex Launcher - Neon Edition v0.3.0
 # Windows PowerShell 5.1 / WPF
-# Tiggy  -> Alt+3 (verified on this PC)
-# Mother -> Alt+1 (verified on this PC)
+# ChatGPT  -> Alt+3 (verified on this PC)
+# Codex -> Alt+1 (verified on this PC)
 # No browser links. No administrator access required.
 # Selection indicates the last requested mode.
 
@@ -22,8 +22,8 @@ New-Item -ItemType Directory -Path $script:folder -Force |
     Out-Null
 
 $script:cfg = @{
-    Name1 = 'Tiggy'
-    Name2 = 'Mother'
+    Name1 = 'ChatGPT'
+    Name2 = 'Codex'
     Selected = 0
     Width = 530
     Height = 345
@@ -65,7 +65,7 @@ $xaml = @'
 <Window
  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
- Title="ChatGPT/Codex selector"
+ Title="ChatGPT &amp; Codex Launcher"
  WindowStyle="None"
  AllowsTransparency="True"
  ResizeMode="NoResize"
@@ -190,13 +190,13 @@ $xaml = @'
       VerticalAlignment="Center"
       Cursor="SizeAll">
       <TextBlock
-       Text="ChatGPT/Codex selector"
+       Text="ChatGPT &amp; Codex Launcher"
        Foreground="#F4F7FF"
        FontFamily="Segoe UI"
        FontWeight="SemiBold"
        FontSize="17"/>
       <TextBlock
-       Text="NEON EDITION  /  V0.3"
+       Text="NEON EDITION  /  V0.3.0"
        Foreground="#93ABD5"
        FontFamily="Segoe UI"
        FontSize="9"
@@ -239,7 +239,7 @@ $xaml = @'
      <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
 
-    <!-- TIGGY -->
+    <!-- CHATGPT -->
 
     <Border x:Name="BlueCard"
      Grid.Column="0"
@@ -296,7 +296,7 @@ $xaml = @'
        </Viewbox>
 
        <TextBlock x:Name="BlueName"
-        Text="Tiggy"
+        Text="ChatGPT"
         Foreground="White"
         FontSize="21"
         FontWeight="Bold"
@@ -332,7 +332,7 @@ $xaml = @'
      </Grid>
     </Border>
 
-    <!-- MOTHER -->
+    <!-- CODEX -->
 
     <Border x:Name="PurpleCard"
      Grid.Column="2"
@@ -404,7 +404,7 @@ $xaml = @'
        </Viewbox>
 
        <TextBlock x:Name="PurpleName"
-        Text="Mother"
+        Text="Codex"
         Foreground="White"
         FontSize="21"
         FontWeight="Bold"
@@ -695,9 +695,9 @@ function Invoke-Mode([int]$number) {
         Start-Sleep -Milliseconds 400
 
         if ($number -eq 1) {
-            $shell.SendKeys('%3')  # Tiggy
+            $shell.SendKeys('%3')  # ChatGPT
         } else {
-            $shell.SendKeys('%1')  # Mother
+            $shell.SendKeys('%1')  # Codex
         }
 
         $script:cfg.Selected = $number
@@ -707,7 +707,7 @@ function Invoke-Mode([int]$number) {
     } catch {
         [System.Windows.MessageBox]::Show(
             "Mode switch failed: $($_.Exception.Message)",
-            'ChatGPT/Codex selector'
+            'ChatGPT & Codex Launcher'
         ) | Out-Null
     }
 }

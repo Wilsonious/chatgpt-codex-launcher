@@ -2,7 +2,7 @@
 
 ## What the launcher does
 
-The launcher searches for a matching local ChatGPT desktop window, brings it to the foreground, and sends a fixed keyboard shortcut using Windows Script Host. It also saves widget preferences in your local roaming application-data folder.
+ChatGPT & Codex Launcher searches for a matching local ChatGPT desktop window, brings it to the foreground, and sends a fixed keyboard shortcut using Windows Script Host. It also saves widget preferences in your local roaming application-data folder.
 
 It does not make network requests, collect telemetry, read conversations, access an API key, or send chat content anywhere. The ChatGPT app's own network and privacy behavior is separate.
 

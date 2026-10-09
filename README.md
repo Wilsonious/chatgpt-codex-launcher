@@ -1,6 +1,6 @@
-# Tiggy & Mother Launcher
+# ChatGPT & Codex Launcher
 
-A small floating Windows widget for switching an already-open ChatGPT desktop app between **Tiggy (ChatGPT)** and **Mother (Codex)**.
+A small floating Windows widget for switching an already-open ChatGPT desktop app between **ChatGPT** and **Codex**.
 
 Two buttons, editable names, and an optional always-on-top window. The launcher sends the same keyboard shortcuts you could press yourself.
 
@@ -8,9 +8,15 @@ Two buttons, editable names, and an optional always-on-top window. The launcher 
 
 *Rendered preview of the shipped interface. No desktop or chat content is shown.*
 
+## Why we made it
+
+Switching between ChatGPT and Codex felt clunky and confusing in our everyday use. We wanted a clear choice we could see and reach, so we made a small floating widget with two straightforward buttons.
+
+It keeps the existing app shortcuts and puts the choice within easy reach, with editable labels and an optional always-on-top window.
+
 ## Download and run
 
-1. [Download the latest Windows ZIP](https://github.com/Wilsonious/tiggy-mother-launcher/releases/latest/download/Tiggy-Mother-Launcher-v0.3.0-Windows.zip).
+1. [Download the latest Windows ZIP](https://github.com/Wilsonious/chatgpt-codex-launcher/releases/latest/download/ChatGPT-Codex-Launcher-v0.3.0-Windows.zip).
 2. Review the included source before running it. If the ZIP's **Properties** window shows **Unblock**, select it only if you trust the download, then apply the change.
 3. Use **Extract All** to unpack the ZIP into a normal folder you can write to. Run the launcher from the extracted folder.
 4. Open the **ChatGPT Windows desktop app** and sign in.
@@ -24,8 +30,8 @@ This is a portable script package, with no installer and no administrator requir
 
 | Button | Action in the accepted v0.3 build |
 | --- | --- |
-| **Tiggy** — blue | Focuses a detected ChatGPT desktop window and sends **Alt+3**. On the original tested PC, this selected ChatGPT. |
-| **Mother** — purple | Focuses a detected ChatGPT desktop window and sends **Alt+1**. On the original tested PC, this selected Codex. |
+| **ChatGPT** — blue | Focuses a detected ChatGPT desktop window and sends **Alt+3**. On the original tested PC, this selected ChatGPT. |
+| **Codex** — purple | Focuses a detected ChatGPT desktop window and sends **Alt+1**. On the original tested PC, this selected Codex. |
 
 These shortcut mappings are fixed in the source. ChatGPT app versions or configurations may map them differently; check the shortcuts in your own app before relying on the labels.
 
@@ -42,7 +48,7 @@ The selected card shows the **last mode requested by the widget**. It does not r
 
 *Rendered preview of the shipped interface.*
 
-Settings are saved locally in `%APPDATA%\NeonChatSelector\settings-v0.3.json`. An existing v0.3 settings file is reused. Personal settings are not included in the download.
+Settings are saved locally in `%APPDATA%\NeonChatSelector\settings-v0.3.json`. An existing v0.3 settings file is reused, including its saved button names. Fresh settings use **ChatGPT** and **Codex**. Personal settings are not included in the download.
 
 See [customization and troubleshooting](docs/CUSTOMIZATION.md) for reset steps and source-level changes.
 
@@ -56,7 +62,7 @@ See [customization and troubleshooting](docs/CUSTOMIZATION.md) for reset steps a
 
 There are no third-party PowerShell modules, npm packages, API keys, or REAPER dependencies.
 
-Jack live-tested the original v0.3 launcher and its edit controls on his Windows PC. Other Windows and ChatGPT app versions have not yet been independently validated.
+Jack live-tested the original v0.3 launcher and its edit controls on his Windows PC. The public branding update on **2026-10-08** changes default labels, display text, and comments while preserving that accepted behavior. Other Windows and ChatGPT app versions have not yet been independently validated.
 
 ## Known limits
 
@@ -82,7 +88,7 @@ Close the widget, then delete the extracted folder and any shortcut you created.
 
 ```text
 Start-Launcher.cmd         Windows launch helper
-src/                      Accepted v0.3 PowerShell source
+src/                      v0.3 PowerShell source with public labels
 scripts/Build-Release.ps1  Builds the portable ZIP and SHA-256 checksums
 docs/                     Customization, security, screenshots, release notes
 CHANGELOG.md              Release history

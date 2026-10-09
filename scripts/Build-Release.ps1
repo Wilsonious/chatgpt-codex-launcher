@@ -5,7 +5,7 @@ param()
 $ErrorActionPreference = 'Stop'
 $repoRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 $version = '0.3.0'
-$packageName = "Tiggy-Mother-Launcher-v$version-Windows"
+$packageName = "ChatGPT-Codex-Launcher-v$version-Windows"
 $distPath = Join-Path $repoRoot 'dist'
 $zipPath = Join-Path $distPath "$packageName.zip"
 $checksumsPath = Join-Path $distPath 'SHA256SUMS.txt'
